@@ -173,3 +173,47 @@ def get_players
 end
 
 
+
+arr = [1,2,3]
+
+def sq(array)
+  array.map do |a|
+    a * a
+  end
+end
+
+# sq(arr) => returns [1,4,9]
+
+names = ['Syed', 'Naush', 'Jordan']
+
+def print(array)
+  array.each do |a|
+    puts a
+  end
+end
+
+# print(names) 
+# => prints 
+# 'Syed'
+# 'Naush'
+# 'Jordan'
+
+numbers = [2,4,7,9,12]
+
+def numberCheck(array)
+
+  array.select do |a|
+    a.even?
+  end
+end
+
+# numberCheck(numbers) => returns [2,4,12]
+
+def findTheFirstNumber(array)
+
+  array.find do |a|
+    a.even?
+  end
+end
+
+# findTheFirstNumber(numbers) => return 2
