@@ -73,6 +73,9 @@ INSERT INTO fans_returns (name,artist_id) VALUES ('Charles',169);
 
   ```sql
     SELECT * FROM fans_returns WHERE not artist_id = 169;
+
+    -- SELECT * FROM fans_returns WHERE artist_id != 169;
+
   ```
       
         
