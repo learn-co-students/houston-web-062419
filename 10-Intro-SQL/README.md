@@ -72,8 +72,8 @@ INSERT INTO fans_returns (name,artist_id) VALUES ('Charles',169);
 7. Write the SQL to return fans that are not fans of the black eyed peas.
 
 ```sql
-SELECT * FROM fans_returns WHERE not artist_id = 169
--- SELECT * FROM fans_returns WHERE artist_id != 169
+ SELECT * FROM fans_returns WHERE not artist_id = 169
+ -- SELECT * FROM fans_returns WHERE artist_id != 169
 ```
 
 8. Write the SQL to display an artists name next to their album title
