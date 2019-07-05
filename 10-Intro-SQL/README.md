@@ -72,9 +72,9 @@ INSERT INTO fans_returns (name,artist_id) VALUES ('Charles',169);
 7. Write the SQL to return fans that are not fans of the black eyed peas.
 
   ```sql
-    SELECT * FROM fans_returns WHERE not artist_id = 169;
+  SELECT * FROM fans_returns WHERE not artist_id = 169;
 
-    -- SELECT * FROM fans_returns WHERE artist_id != 169;
+  -- SELECT * FROM fans_returns WHERE artist_id != 169;
 
   ```
       
@@ -82,19 +82,33 @@ INSERT INTO fans_returns (name,artist_id) VALUES ('Charles',169);
 8. Write the SQL to display an artists name next to their album title
 
 ```sql
-
+SELECT artists.name,albums.title FROM artists 
+JOIN albums
+ON artists.ArtistId = albums.ArtistId
 ```
 
 9. Write the SQL to display artist name, album name and number of tracks on that album
 
 ```sql
-
+SELECT artists.name, albums.Title, COUNT(tracks.name) FROM artists
+JOIN albums
+ON artists.ArtistId = albums.ArtistId
+JOIN tracks
+ON albums.AlbumId = tracks.AlbumId
+GROUP BY albums.AlbumId
 ```
 
 10. Write the SQL to return the name of all of the artists in the 'Pop' Genre
 
 ```sql
-
+SELECT DISTINCT artists.name FROM artists
+JOIN albums
+ON albums.ArtistId = artists.ArtistId
+JOIN tracks
+ON tracks.AlbumId = albums.AlbumId
+JOIN genres
+ON tracks.GenreId = genres.GenreId
+WHERE genres.Name = 'Pop';
 ```
 
 ## BONUS (very hard)
@@ -106,6 +120,13 @@ INSERT INTO fans_returns (name,artist_id) VALUES ('Charles',169);
     from greatest to least
 
 ```sql
-
-
+SELECT artists.name,
+COUNT(tracks.TrackId) as num_rock
+FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+JOIN artists ON artists.ArtistId=albums.ArtistId
+WHERE tracks.GenreId=1
+GROUP BY artists.ArtistId
+HAVING num_rock > 30
+ORDER BY num_rock DESC;
 ```
