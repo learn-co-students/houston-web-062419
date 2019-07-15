@@ -1,0 +1,9 @@
+<p>Book title:</p>
+<%= @book.title %>
+<p>Book Snippet:</p>
+<%= @book.snippet %>
+
+<form action='/books/<%= @book.id %>' method='post'>
+<input type='hidden' name='_method' value='delete'/> 
+    <input type='submit' value='DELETE the BOOK'/>
+</form>
