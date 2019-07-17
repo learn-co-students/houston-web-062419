@@ -5,15 +5,16 @@
 * - [ ] Describe how to nest hashes inside of the params hash
 
 **TASK:** Create AuthorsController and associated view
-| Controller    | views         |
-| ------------- | ------------- |
-| `get '/authors'`| `authors/index` |
-| `get '/authors/:id'`| `authors/show` |
-| `get '/authors/new'`| `authors/new` |
-| ` post '/authors'`| `redirect '/authors/:id'`|
-| `get '/authors/:id/edit'`| `authors/edit` |
-| `patch '/authors/:id'`| `redirect '/authors/:id'` |
-| `delete '/authors/:id'`| `redirect '/authors'` |
+
+| Controller               | views                    |
+| ------------------------ | ------------------------ |
+| `get '/authors'`         |`authors/index`           |
+| `get '/authors/:id'`     | `authors/show`           |
+| `get '/authors/new'`     | `authors/new`            | 
+| ` post '/authors'`       | `redirect '/authors/:id'`|
+| `get '/authors/:id/edit'`| `authors/edit`           |
+| `patch '/authors/:id'`   | `redirect '/authors/:id'`|
+| `delete '/authors/:id'`  | `redirect '/authors'`    |
 
 
 #### **Define relationship between two models**
