@@ -10,6 +10,7 @@ class BooksController < ApplicationController
 
     #New book
     get '/books/new' do
+        @authors = Author.all
         erb :'books/new'
     end
 
@@ -23,13 +24,23 @@ class BooksController < ApplicationController
     #Create a new book
     post '/books' do
         # binding.pry
-        book = Book.create(params)
+        book = Book.new(params[:book])
+        # binding.pry
+        if !params[:author][:name].empty?
+            # binding.pry
+            new_author = Author.create(params[:author])
+            book.author = new_author
+        end
+        # binding.pry
+        book.save
+
         redirect "/books/#{book.id}"
     end
 
     #Edit a book form
     get '/books/:id/edit' do
         @book = current_book
+        @authors = Author.all
         erb :'books/edit'    
     end
 
@@ -38,7 +49,7 @@ class BooksController < ApplicationController
         # binding.pry
         book = current_book
 
-        book.update(title: params[:title], snippet: params[:snippet])
+        book.update(title: params[:title], snippet: params[:snippet], author_id: params[:author_id])
         redirect "/books/#{book.id}"
         # redirect "/books/#{params[:id]}"
 

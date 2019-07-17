@@ -3,7 +3,19 @@
 <label>Title:</label>
 <input type='text' name='title' value="<%= @book.title %>"/>
 <label>Snippet:</label>
-<%-# Changed form input for large text -%>
 <textarea type='text' name='snippet'><%= @book.snippet %></textarea>
+<select name='author_id'>
+    <% @authors.each do |author| %>
+        <% if author.id == @book.author_id %>
+            <option value="<%=author.id%>" selected>
+                <%= author.name %>
+            </option>
+        <% else %>
+            <option value="<%=author.id%>">
+                <%= author.name %>
+            </option>
+        <% end %>
+    <% end %>
+</select>
 <input type='submit' value='Edit Book'/>
 </form>
