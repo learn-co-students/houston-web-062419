@@ -1,10 +1,10 @@
 <form action='/books/<%= @book.id%>' method='post'>
 <input type='hidden' name='_method' value='patch'/> 
 <label>Title:</label>
-<input type='text' name='title' value="<%= @book.title %>"/>
+<input type='text' name='book[title]' value="<%= @book.title %>"/>
 <label>Snippet:</label>
-<textarea type='text' name='snippet'><%= @book.snippet %></textarea>
-<select name='author_id'>
+<textarea type='text' name='book[snippet]'><%= @book.snippet %></textarea>
+<select name='book[author_id]'>
     <% @authors.each do |author| %>
         <% if author.id == @book.author_id %>
             <option value="<%=author.id%>" selected>
@@ -17,5 +17,7 @@
         <% end %>
     <% end %>
 </select>
+<label>New Author: </label>
+<input type='text' name='author[name]' />
 <input type='submit' value='Edit Book'/>
 </form>

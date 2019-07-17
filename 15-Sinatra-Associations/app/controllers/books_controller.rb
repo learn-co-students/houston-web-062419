@@ -49,7 +49,14 @@ class BooksController < ApplicationController
         # binding.pry
         book = current_book
 
-        book.update(title: params[:title], snippet: params[:snippet], author_id: params[:author_id])
+        if params[:author][:name].empty?
+            book.update(title: params[:book][:title], snippet: params[:book][:snippet], author_id: params[:book][:author_id])
+        else
+            new_author = Author.create(params[:author])
+            book.update(title: params[:book][:title], snippet: params[:book][:snippet], author_id: new_author.id)
+        end
+
+        
         redirect "/books/#{book.id}"
         # redirect "/books/#{params[:id]}"
 
