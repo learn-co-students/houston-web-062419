@@ -1,0 +1,9 @@
+<form action='/books/<%= @book.id%>' method='post'>
+<input type='hidden' name='_method' value='patch'/> 
+<label>Title:</label>
+<input type='text' name='title' value="<%= @book.title %>"/>
+<label>Snippet:</label>
+<%-# Changed form input for large text -%>
+<textarea type='text' name='snippet'><%= @book.snippet %></textarea>
+<input type='submit' value='Edit Book'/>
+</form>
