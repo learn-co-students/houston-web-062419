@@ -4,7 +4,7 @@
 * - [ ] Describe how the params hash is built
 * - [ ] Describe how to nest hashes inside of the params hash
 
-**TASK:** Create AuthorsController and associated view
+**TASK:** Create AuthorsController and associated views
 
 | Controller               | views                    |
 | ------------------------ | ------------------------ |
