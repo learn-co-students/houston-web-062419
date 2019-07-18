@@ -1,0 +1,20 @@
+<form action='/actors' method='post'>
+<label>Actor's name: </label>
+<input type='text' name='actor[name]'/>
+<br/>
+
+<% @movies.each do |movie| %>
+<input type='checkbox' name='actor[movies][]' value='<%= movie.id%>'/> 
+<%= movie.title %>
+<br/>
+<label>Character name:</label>
+<input type='text' name='character[name][]'/><br/>
+<% end %>
+
+<label>Movie's title: </label>
+<input type='text' name='movie[title]'/>
+
+
+<input type='submit' value='Create Actor'/>
+
+</form>
