@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+#### important syntax:
+```ruby
+<%= f.collection_select :owner_id, @owners, :id, :name %>
+```
