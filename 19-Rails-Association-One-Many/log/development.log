@@ -1,0 +1,516 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDragons (20190722143911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "dragons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190722143911_create_dragons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190722143911"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (7.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-22 14:39:42.701894"], ["updated_at", "2019-07-22 14:39:42.701894"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDragon Create (0.4ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tomar"], ["age", 2055], ["created_at", "2019-07-22 14:41:16.719960"], ["updated_at", "2019-07-22 14:41:16.719960"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDragon Create (0.3ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dojo"], ["age", 1905], ["created_at", "2019-07-22 14:41:16.723135"], ["updated_at", "2019-07-22 14:41:16.723135"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDragon Create (0.3ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Naush"], ["age", 2081], ["created_at", "2019-07-22 14:41:16.725445"], ["updated_at", "2019-07-22 14:41:16.725445"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mDragon Create (0.3ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tj"], ["age", 3000], ["created_at", "2019-07-22 14:41:16.728067"], ["updated_at", "2019-07-22 14:41:16.728067"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mDragon Create (0.4ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bojo"], ["age", 5060], ["created_at", "2019-07-22 14:41:16.730471"], ["updated_at", "2019-07-22 14:41:16.730471"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mDragon Load (1.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/dragons" for ::1 at 2019-07-22 09:50:21 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.2ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 1005ms (Views: 988.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 09:50:34 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.5ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dragons/1" for ::1 at 2019-07-22 09:53:04 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDragon Load (0.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 22.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dragons/new" for ::1 at 2019-07-22 10:00:47 -0500
+Processing by DragonsController#new as HTML
+  Rendering dragons/new.html.erb within layouts/application
+  Rendered dragons/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 75ms (Views: 62.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/dragons" for ::1 at 2019-07-22 10:01:13 -0500
+Processing by DragonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5KCpdKKg35sZRIrxFDNDuIwgqOkzF2c5DulRXYqBO3wIwZQrzIi+zhv3gRHZrPL85QTLLaSFiOIYtrlrMGtVg==", "dragon"=>{"name"=>"Charles", "age"=>"2500"}, "commit"=>"Create Dragon"}
+Unpermitted parameter: :age
+Completed 500 Internal Server Error in 333085ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/dragons_controller.rb:19:in `create'
+Started GET "/dragons/new" for ::1 at 2019-07-22 10:07:47 -0500
+Processing by DragonsController#new as HTML
+  Rendering dragons/new.html.erb within layouts/application
+  Rendered dragons/new.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 640ms (Views: 503.9ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/dragons" for ::1 at 2019-07-22 10:07:55 -0500
+Processing by DragonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zWTYPA5402PN2SvcRSyDjxVBl89pea0Vp3oAZ2joWIPG1VzJc8By5pnT5/PGGv1KBOUGQHsn5qrLI3/HsgPxOA==", "dragon"=>{"name"=>"Charles", "age"=>"2500"}, "commit"=>"Create Dragon"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mDragon Create (0.8ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Charles"], ["age", 2500], ["created_at", "2019-07-22 15:08:17.321046"], ["updated_at", "2019-07-22 15:08:17.321046"]]
+  ↳ (byebug):1
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 30323ms (ActiveRecord: 3.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/dragons_controller.rb:19:in `create'
+Started GET "/dragons/new" for ::1 at 2019-07-22 10:10:19 -0500
+Processing by DragonsController#new as HTML
+  Rendering dragons/new.html.erb within layouts/application
+  Rendered dragons/new.html.erb within layouts/application (131.5ms)
+Completed 200 OK in 1088ms (Views: 816.4ms | ActiveRecord: 41.1ms)
+
+
+Started POST "/dragons" for ::1 at 2019-07-22 10:10:26 -0500
+Processing by DragonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCv5/hddHg4UP2HUgPVUSFHrXTwy52rUjpHo4cOgrHlXmn0LauW/i0A1rfsDwyqNQE/MsyC5IWviyJdBGUsFwg==", "dragon"=>{"name"=>"test", "age"=>"2000"}, "commit"=>"Create Dragon"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dragons_controller.rb:19
+  [1m[36mDragon Create (3.4ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["age", 2000], ["created_at", "2019-07-22 15:10:26.964449"], ["updated_at", "2019-07-22 15:10:26.964449"]]
+  ↳ app/controllers/dragons_controller.rb:19
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dragons_controller.rb:19
+Redirected to http://localhost:3000/dragons/7
+Completed 302 Found in 125ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/dragons/7" for ::1 at 2019-07-22 10:10:27 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDragon Load (1.3ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 626ms (Views: 571.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dragons/new" for ::1 at 2019-07-22 10:10:55 -0500
+Processing by DragonsController#new as HTML
+  Rendering dragons/new.html.erb within layouts/application
+  Rendered dragons/new.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 641ms (Views: 496.7ms | ActiveRecord: 14.6ms)
+
+
+Started POST "/dragons" for ::1 at 2019-07-22 10:11:05 -0500
+Processing by DragonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mgjh+enzqa5OnQr2DSjOxv7GCwsi/HzIUOCfBrrYKoaRuWUMlEsIKxqXxtmOHrAD72KahDCiN3c8ueCmYDODPQ==", "dragon"=>{"name"=>"testII", "age"=>"500"}, "commit"=>"Create Dragon"}
+  [1m[35m (10.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dragons_controller.rb:19
+  [1m[36mDragon Create (2.3ms)[0m  [1m[32mINSERT INTO "dragons" ("name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testII"], ["age", 500], ["created_at", "2019-07-22 15:11:05.510297"], ["updated_at", "2019-07-22 15:11:05.510297"]]
+  ↳ app/controllers/dragons_controller.rb:19
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dragons_controller.rb:19
+Redirected to http://localhost:3000/dragons/8
+Completed 302 Found in 131ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/dragons/8" for ::1 at 2019-07-22 10:11:05 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDragon Load (2.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 505ms (Views: 443.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:15:07 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.2ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 259ms (Views: 248.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dragons/2" for ::1 at 2019-07-22 10:15:17 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDragon Load (0.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:15:32 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.1ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dragons/new" for ::1 at 2019-07-22 10:23:24 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DragonsController#new as HTML
+  Rendering dragons/new.html.erb within layouts/application
+  Rendered dragons/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 159ms (Views: 148.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:28:35 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (0.3ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 34ms (Views: 29.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dragons/3" for ::1 at 2019-07-22 10:28:37 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDragon Load (0.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dragons/3/edit" for ::1 at 2019-07-22 10:28:40 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDragon Load (0.1ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dragons/3/edit" for ::1 at 2019-07-22 10:32:05 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDragon Load (0.3ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (2.8ms)
+  Rendered dragons/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dragons/new" for ::1 at 2019-07-22 10:32:10 -0500
+Processing by DragonsController#new as HTML
+  Rendering dragons/new.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (1.3ms)
+  Rendered dragons/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dragons/7/edit" for ::1 at 2019-07-22 10:35:14 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDragon Load (0.8ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (4.3ms)
+  Rendered dragons/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 101ms (Views: 53.3ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/dragons/7" for ::1 at 2019-07-22 10:35:21 -0500
+Processing by DragonsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MOgY7CF6NoM/GXSsZErNBWIs7YIchkh7g/8ONK7Syvg7WZwZXMKXBmsTuIPnfLPAc4h8DQ7YA8TvpnGUdDljQw==", "dragon"=>{"name"=>"test", "age"=>"2500"}, "commit"=>"Update Dragon", "id"=>"7"}
+Completed 500 Internal Server Error in 51538ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/dragons_controller.rb:29:in `update'
+Started GET "/dragons/7/edit" for ::1 at 2019-07-22 10:37:17 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDragon Load (1.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (61.6ms)
+  Rendered dragons/edit.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 675ms (Views: 490.9ms | ActiveRecord: 18.4ms)
+
+
+Started PATCH "/dragons/7" for ::1 at 2019-07-22 10:37:29 -0500
+Processing by DragonsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YEzHetVoCeKa8MfZiebYetQDh6lP7qnXo/StM/tgx59r/UOPqNCoZ876C/YK0Ka/xacWJl2w4mjPrdKTIYtuJA==", "dragon"=>{"name"=>"testttttt", "age"=>"2500"}, "commit"=>"Update Dragon", "id"=>"7"}
+  [1m[36mDragon Load (1.3ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:28
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dragons_controller.rb:29
+  [1m[36mDragon Update (1.7ms)[0m  [1m[33mUPDATE "dragons" SET "name" = ?, "age" = ?, "updated_at" = ? WHERE "dragons"."id" = ?[0m  [["name", "testttttt"], ["age", 2500], ["updated_at", "2019-07-22 15:37:29.760603"], ["id", 7]]
+  ↳ app/controllers/dragons_controller.rb:29
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dragons_controller.rb:29
+Redirected to http://localhost:3000/dragons/7
+Completed 302 Found in 117ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/dragons/7" for ::1 at 2019-07-22 10:37:29 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDragon Load (2.0ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 644ms (Views: 558.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:37:34 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (2.1ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (74.9ms)
+Completed 200 OK in 566ms (Views: 533.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/dragons/7/edit" for ::1 at 2019-07-22 10:42:56 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDragon Load (2.6ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (66.6ms)
+  Rendered dragons/edit.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 878ms (Views: 660.9ms | ActiveRecord: 13.2ms)
+
+
+Started DELETE "/dragons/7" for ::1 at 2019-07-22 10:43:22 -0500
+Processing by DragonsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Py7LRPC/XBGOOa/CgviXsryd7x6B9LsJXio7cH36OYg0n0+xjQf9lNozY+0Bzul3rTl+kZOq8LYyc0TQpxGQMw==", "commit"=>"DELETE Dragon", "id"=>"7"}
+Completed 500 Internal Server Error in 8835ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `destroy'
+app/controllers/dragons_controller.rb:35:in `destroy'
+Started GET "/dragons/7/edit" for ::1 at 2019-07-22 10:44:56 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDragon Load (1.3ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (133.9ms)
+  Rendered dragons/edit.html.erb within layouts/application (153.4ms)
+Completed 200 OK in 848ms (Views: 700.4ms | ActiveRecord: 8.3ms)
+
+
+Started DELETE "/dragons/7" for ::1 at 2019-07-22 10:45:00 -0500
+Processing by DragonsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jntEuZQV32qtMNd3hiUbdZg0zhphnThwzcM5mR9PdB6FysBM6a1+7/k6G1gFE2WwiZBflXPDc8+hmkY5xaTdpQ==", "commit"=>"DELETE Dragon", "id"=>"7"}
+  [1m[36mDragon Load (1.6ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:35
+  [1m[35m (1.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dragons_controller.rb:36
+  [1m[36mDragon Destroy (2.8ms)[0m  [1m[31mDELETE FROM "dragons" WHERE "dragons"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/dragons_controller.rb:36
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dragons_controller.rb:36
+Redirected to http://localhost:3000/dragons
+Completed 302 Found in 106ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:45:00 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.7ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 681ms (Views: 596.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dragons/8" for ::1 at 2019-07-22 10:45:04 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDragon Load (8.8ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:10
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 524ms (Views: 495.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/dragons/8/edit" for ::1 at 2019-07-22 10:45:09 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDragon Load (4.3ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:24
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (65.0ms)
+  Rendered dragons/edit.html.erb within layouts/application (97.5ms)
+Completed 200 OK in 683ms (Views: 604.1ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/dragons/8" for ::1 at 2019-07-22 10:45:11 -0500
+Processing by DragonsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l2da43QOCw4L5/eeKOaSg4M91jJiSUCYV3a5u/YiM32c1t4WCbaqi1/tO7Gr0OxGkplHvXAXCyc7L8YbLMmaxg==", "commit"=>"DELETE Dragon", "id"=>"8"}
+  [1m[36mDragon Load (16.9ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:35
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dragons_controller.rb:36
+  [1m[36mDragon Destroy (1.6ms)[0m  [1m[31mDELETE FROM "dragons" WHERE "dragons"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/dragons_controller.rb:36
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dragons_controller.rb:36
+Redirected to http://localhost:3000/dragons
+Completed 302 Found in 139ms (ActiveRecord: 23.1ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:45:11 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (2.1ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 631ms (Views: 589.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:47:07 -0500
+Processing by DragonsController#index as HTML
+Completed 404 Not Found in 91ms (ActiveRecord: 16.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Dragon without an ID):
+  
+app/controllers/dragons_controller.rb:47:in `current_dragon'
+Started GET "/dragons" for ::1 at 2019-07-22 10:48:19 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (2.4ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (164.4ms)
+Completed 200 OK in 715ms (Views: 643.7ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/dragons/2" for ::1 at 2019-07-22 10:48:35 -0500
+Processing by DragonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDragon Load (1.1ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:47
+  Rendering dragons/show.html.erb within layouts/application
+  Rendered dragons/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 413ms (Views: 365.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dragons/2/edit" for ::1 at 2019-07-22 10:48:40 -0500
+Processing by DragonsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDragon Load (1.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:47
+  Rendering dragons/edit.html.erb within layouts/application
+  Rendered dragons/_form.html.erb (92.9ms)
+  Rendered dragons/edit.html.erb within layouts/application (117.0ms)
+Completed 200 OK in 799ms (Views: 722.0ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/dragons/2" for ::1 at 2019-07-22 10:48:43 -0500
+Processing by DragonsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NpHxU5H9EBUoyzSeQpeQ/gqozFLwLTw+jjE+tWgjF4c9IHWm7EWxkHzB+LHBoe47Gwxd3eJzd4HiaEEVssi+PA==", "commit"=>"DELETE Dragon", "id"=>"2"}
+  [1m[36mDragon Load (9.2ms)[0m  [1m[34mSELECT  "dragons".* FROM "dragons" WHERE "dragons"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dragons_controller.rb:47
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dragons_controller.rb:37
+  [1m[36mDragon Destroy (1.8ms)[0m  [1m[31mDELETE FROM "dragons" WHERE "dragons"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/dragons_controller.rb:37
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dragons_controller.rb:37
+Redirected to http://localhost:3000/dragons
+Completed 302 Found in 101ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/dragons" for ::1 at 2019-07-22 10:48:43 -0500
+Processing by DragonsController#index as HTML
+  Rendering dragons/index.html.erb within layouts/application
+  [1m[36mDragon Load (1.5ms)[0m  [1m[34mSELECT "dragons".* FROM "dragons"[0m
+  ↳ app/views/dragons/index.html.erb:2
+  Rendered dragons/index.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 653ms (Views: 592.8ms | ActiveRecord: 1.5ms)
+
+
