@@ -1,0 +1,8 @@
+<%= form_for @dragon do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :age %>
+<%= f.text_field :age %>
+<%= f.collection_select :owner_id, @owners, :id, :name %>
+<%= f.submit %>
+<% end %> 
