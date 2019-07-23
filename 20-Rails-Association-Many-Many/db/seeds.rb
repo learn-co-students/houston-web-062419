@@ -9,8 +9,15 @@
 o1 = Owner.create(name: 'Aaron')
 o2 = Owner.create(name: 'Naush')
 
-Dragon.create(name: "Tomar", age: 2055, owner_id: o1.id)
-Dragon.create(name: "Dojo", age: 1905, owner_id: o1.id)
-Dragon.create(name: "Naush Jr", age: 2081, owner_id: o2.id)
-Dragon.create(name: "Tj", age: 3000, owner_id: o2.id)
-Dragon.create(name: "Bojo", age: 5060, owner_id: o1.id)
+d1 = Dragon.create(name: "Tomar", age: 2055)
+d2 = Dragon.create(name: "Dojo", age: 1905)
+d3 = Dragon.create(name: "Naush Jr", age: 2081)
+d4 = Dragon.create(name: "Tj", age: 3000)
+d5 = Dragon.create(name: "Bojo", age: 5060)
+
+Ownership.create(owner_id: o1.id, dragon_id: d1.id)
+Ownership.create(owner_id: o2.id, dragon_id: d2.id)
+Ownership.create(owner_id: o2.id, dragon_id: d1.id)
+Ownership.create(owner_id: o1.id, dragon_id: d4.id)
+Ownership.create(owner_id: o1.id, dragon_id: d3.id)
+

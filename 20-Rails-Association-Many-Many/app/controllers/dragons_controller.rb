@@ -9,7 +9,7 @@ class DragonsController < ApplicationController
 
   def show
     # @dragon = Dragon.find(params[:id])
-    @owner = @dragon.owner
+    @owners = @dragon.owners
   end
 
   def new
@@ -43,7 +43,7 @@ class DragonsController < ApplicationController
 
   private
   def dragons_params
-    params.require(:dragon).permit(:name, :age, :owner_id)
+    params.require(:dragon).permit(:name, :age, owner_ids: [])
   end
 
   def current_dragon

@@ -1,6 +1,10 @@
 class OwnersController < ApplicationController
 
-    before_action :current_owner, only: [:show, :edit, :update, :destroy]
+    before_action :current_owner
+
+    skip_before_action :current_owner, only: [:index, :create, :new]
+
+
     def index
         @owners = Owner.all
     end
@@ -11,6 +15,7 @@ class OwnersController < ApplicationController
 
     def new
         @owner = Owner.new
+        @dragons = Dragon.all
     end
 
     def create
@@ -20,7 +25,7 @@ class OwnersController < ApplicationController
     end
 
     def edit
-
+        @dragons = Dragon.all
     end
 
     def update
@@ -37,7 +42,7 @@ class OwnersController < ApplicationController
     private
 
     def owners_params
-        params.require(:owner).permit(:name)
+        params.require(:owner).permit(:name, dragon_ids: [])
     end
 
     def current_owner

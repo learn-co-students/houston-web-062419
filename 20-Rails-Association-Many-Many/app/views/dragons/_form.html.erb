@@ -3,6 +3,6 @@
 <%= f.text_field :name %>
 <%= f.label :age %>
 <%= f.text_field :age %>
-<%= f.collection_select :owner_id, @owners, :id, :name %>
+<%= f.collection_check_boxes :owner_ids, @owners, :id, :name %>
 <%= f.submit %>
 <% end %> 
