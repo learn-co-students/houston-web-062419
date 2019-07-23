@@ -9,10 +9,12 @@ class DragonsController < ApplicationController
 
   def show
     # @dragon = Dragon.find(params[:id])
+    @owner = @dragon.owner
   end
 
   def new
     @dragon = Dragon.new
+    @owners = Owner.all
   end
 
   def create
@@ -23,6 +25,7 @@ class DragonsController < ApplicationController
 
   def edit
     # @dragon = Dragon.find(params[:id])
+    @owners = Owner.all
   end
 
   def update
@@ -40,7 +43,7 @@ class DragonsController < ApplicationController
 
   private
   def dragons_params
-    params.require(:dragon).permit(:name, :age)
+    params.require(:dragon).permit(:name, :age, :owner_id)
   end
 
   def current_dragon

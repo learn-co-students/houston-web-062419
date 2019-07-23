@@ -1,0 +1,5 @@
+<h1>Name:<%= @owner.name %></h1>
+
+<% @dragons.each do |dragon| %>
+    <%= link_to dragon.name, dragon_path(dragon) %>
+<% end %>
