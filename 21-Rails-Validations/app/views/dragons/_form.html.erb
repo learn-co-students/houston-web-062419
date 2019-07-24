@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+<ul>
+    <% flash[:errors].each do |e| %>
+        <li><%= e %></li>
+    <% end %>
+</ul>
+<% end %>
+
+
+<%= form_for @dragon do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :age %>
+<%= f.text_field :age %>
+<%= f.collection_check_boxes :owner_ids, @owners, :id, :name %>
+<%= f.submit %>
+<% end %> 
