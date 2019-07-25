@@ -1,0 +1,10 @@
+<p>
+    Name: <%= @student.name %>
+    Major: <%= @student.major %>
+    age: <%= @student.age %>
+
+</p>
+    
+<%= link_to @instructor.name, instructor_path(@instructor) %>
+
+<%= link_to "Edit", edit_student_path %>

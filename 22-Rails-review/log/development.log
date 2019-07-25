@@ -1,0 +1,1099 @@
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateInstructors (20190725210927)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725210927"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStudents (20190725211141)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "major" varchar, "age" integer, "instructor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190725211141"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-25 21:12:18.072247"], ["updated_at", "2019-07-25 21:12:18.072247"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Vidhi"], ["created_at", "2019-07-25 21:22:18.557917"], ["updated_at", "2019-07-25 21:22:18.557917"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Eli"], ["created_at", "2019-07-25 21:22:18.561443"], ["updated_at", "2019-07-25 21:22:18.561443"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Aaron"], ["major", "SE"], ["age", 29], ["instructor_id", 1], ["created_at", "2019-07-25 21:22:18.595876"], ["updated_at", "2019-07-25 21:22:18.595876"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wariya"], ["major", "SE"], ["age", 29], ["instructor_id", 2], ["created_at", "2019-07-25 21:22:18.598255"], ["updated_at", "2019-07-25 21:22:18.598255"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Naush"], ["major", "SE"], ["age", 29], ["instructor_id", 2], ["created_at", "2019-07-25 21:22:18.600720"], ["updated_at", "2019-07-25 21:22:18.600720"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Abideen"], ["major", "SE"], ["age", 29], ["instructor_id", 2], ["created_at", "2019-07-25 21:22:18.603183"], ["updated_at", "2019-07-25 21:22:18.603183"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jordan"], ["major", "SE"], ["age", 29], ["instructor_id", 1], ["created_at", "2019-07-25 21:22:18.606260"], ["updated_at", "2019-07-25 21:22:18.606260"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Syed"], ["major", "SE"], ["age", 29], ["instructor_id", 1], ["created_at", "2019-07-25 21:22:18.609656"], ["updated_at", "2019-07-25 21:22:18.609656"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/instructors" for ::1 at 2019-07-25 16:31:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 755ms (Views: 741.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:39:01 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 107ms (Views: 54.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:39:33 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:41:26 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:43:09 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 16:43:11 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/instructors/2" for ::1 at 2019-07-25 16:43:13 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 2]]
+  Rendered instructors/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/new" for ::1 at 2019-07-25 16:49:10 -0500
+Processing by InstructorsController#new as HTML
+  Rendering instructors/new.html.erb within layouts/application
+  Rendered instructors/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 53ms (Views: 45.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/instructors" for ::1 at 2019-07-25 16:49:15 -0500
+Processing by InstructorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kjqvSF4FsmUKL5E2PHIqhs6crX5HTWlC+8u3c3IJBuWrFxBNcAz2i7M5TBFUTZ4aZdalElvETGcuVqgeHuFyyg==", "instructor"=>{"name"=>"Josh"}, "commit"=>"Create Instructor"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Josh"], ["created_at", "2019-07-25 21:49:15.945730"], ["updated_at", "2019-07-25 21:49:15.945730"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/instructors/3
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/instructors/3" for ::1 at 2019-07-25 16:49:15 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 3]]
+  Rendered instructors/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 16:49:19 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/instructors/new" for ::1 at 2019-07-25 16:52:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InstructorsController#new as HTML
+  Rendering instructors/new.html.erb within layouts/application
+  Rendered instructors/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 197ms (Views: 183.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/instructors" for ::1 at 2019-07-25 16:52:30 -0500
+Processing by InstructorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7GUjrryvznF1JD1x98I48lxs3lC1lu57ZZXVqOnChcmnCuLlPv713zCTdKv4Lx/Yju7FV5ffpw4C0g7z09+OA==", "instructor"=>{"name"=>""}, "commit"=>"Create Instructor"}
+Redirected to http://localhost:3000/instructors/new
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/instructors/new" for ::1 at 2019-07-25 16:52:30 -0500
+Processing by InstructorsController#new as HTML
+  Rendering instructors/new.html.erb within layouts/application
+  Rendered instructors/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 16:56:32 -0500
+Started GET "/instructors" for ::1 at 2019-07-25 16:56:42 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.8ms)
+
+
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:56:45 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 58ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:58:02 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/instructors/1/edit" for ::1 at 2019-07-25 16:58:04 -0500
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/edit.html.erb within layouts/application
+  Rendered instructors/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 41ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/instructors/1" for ::1 at 2019-07-25 16:58:10 -0500
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L9kgskQ9px03sBUep0Gnf+z4czzEGMRiYKdL+bbenH0NsIjqpmpxPW6VO/S4AVnkyiGZLRMyZxQdKnHIvKcehw==", "instructor"=>{"name"=>"Vidhi s"}, "commit"=>"Update Instructor", "id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "instructors" SET "name" = ?, "updated_at" = ? WHERE "instructors"."id" = ?[0m  [["name", "Vidhi s"], ["updated_at", "2019-07-25 21:58:10.854447"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/instructors/1
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 16:58:10 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 17:01:52 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 36ms (Views: 24.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/instructors/new" for ::1 at 2019-07-25 17:01:56 -0500
+Processing by InstructorsController#new as HTML
+  Rendering instructors/new.html.erb within layouts/application
+  Rendered instructors/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instructors" for ::1 at 2019-07-25 17:02:01 -0500
+Processing by InstructorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sDbWV3XHbPxgNG0pIOu71VIQf9+5EyELYGGfcKzcFkmJG2lSW84oEtkisA5I1A9J+Vp3s6WaBC61/IAdwDRiZg==", "instructor"=>{"name"=>"dummy"}, "commit"=>"Create Instructor"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "dummy"], ["created_at", "2019-07-25 22:02:01.425908"], ["updated_at", "2019-07-25 22:02:01.425908"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/instructors/4
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/instructors/4" for ::1 at 2019-07-25 17:02:01 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  Rendered instructors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/4/edit" for ::1 at 2019-07-25 17:02:03 -0500
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering instructors/edit.html.erb within layouts/application
+  Rendered instructors/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 17:02:08 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/instructors/4" for ::1 at 2019-07-25 17:02:11 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (1.0ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  Rendered instructors/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/instructors/4/edit" for ::1 at 2019-07-25 17:02:12 -0500
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering instructors/edit.html.erb within layouts/application
+  Rendered instructors/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/instructors/4" for ::1 at 2019-07-25 17:02:33 -0500
+Processing by InstructorsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtkOljd7vbrHNiu8zT3kj8rPtg0MCd1k+ffXPV5ERW7oS+C4Slf8JjCCPYJqkHJ/3t/VxZVbjcKfdvRnn9BK1g==", "commit"=>"Delete instructor", "id"=>"4"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "instructors" WHERE "instructors"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/instructors
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 17:02:33 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students" for ::1 at 2019-07-25 17:04:54 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students" for ::1 at 2019-07-25 17:11:28 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:11:30 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 77ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 17:11:33 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 53ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:11:38 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 17:11:40 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 17:16:12 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-25 17:16:18 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 35ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-25 17:23:45 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 27ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/students" for ::1 at 2019-07-25 17:24:02 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TsxvMY7yvOG29/UscVknMyTUENFsts3Dm/t6AtUtdeF34dA0oPv4Dw/hKAsZZpOvj54YvXA/6OZOZmVvucUBzg==", "student"=>{"name"=>"dummy", "major"=>"DS", "age"=>"12", "instructor_id"=>"1"}, "commit"=>"Create Student"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/students/new
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-25 17:24:02 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/students" for ::1 at 2019-07-25 17:24:21 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"It9NjDtNhUnxUXA14YU+FKzUz2nZjnk3ZUUnFs4OS8Yb8vKJFUTBp0hHrRKJuoqIB57HBcUHXBKw2Dh7ouY/6Q==", "student"=>{"name"=>"Dummy", "major"=>"SE", "age"=>"18", "instructor_id"=>"1"}, "commit"=>"Create Student"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/students/new
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-25 17:24:21 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/students" for ::1 at 2019-07-25 17:24:50 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uRMNUwilE6cm1wsGOvmblqoVWlWJ/dG5vouFZAppMGiAPrJWJqxXSZ/B1iFSxi8KAV9SOZV09JxrFpoJZoFERw==", "student"=>{"name"=>"Dummy", "major"=>"SE", "age"=>"20", "instructor_id"=>"1"}, "commit"=>"Create Student"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "age", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dummy"], ["major", "SE"], ["age", 20], ["instructor_id", 1], ["created_at", "2019-07-25 22:24:50.088714"], ["updated_at", "2019-07-25 22:24:50.088714"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/7
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-25 17:24:50 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-25 17:29:04 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 17.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/students/7/edit" for ::1 at 2019-07-25 17:29:06 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 57ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/students/7" for ::1 at 2019-07-25 17:29:13 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lneQfZzJafFy+nwPMOgxf6o5opsMPYtCZhypPoPWLc5qZkMKWPhAdXI8NNnfQfpkptC0sMVUZlVVs9oLHCNRUg==", "student"=>{"name"=>"Dummy", "major"=>"SE", "age"=>"22", "instructor_id"=>"2"}, "commit"=>"Update Student", "id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "students" SET "age" = ?, "instructor_id" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["age", 22], ["instructor_id", 2], ["updated_at", "2019-07-25 22:29:13.976646"], ["id", 7]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/7
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-25 17:29:13 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/instructors/2" for ::1 at 2019-07-25 17:29:16 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 2]]
+  Rendered instructors/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-25 17:29:17 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-25 17:30:15 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 16.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/7/edit" for ::1 at 2019-07-25 17:30:16 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/students/7" for ::1 at 2019-07-25 17:30:18 -0500
+Processing by StudentsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rJTiFOjkMvXOTliN9McdTBxdyTCluiRXaLniRkq3fm/mHTUL5kASjytTnwMsmSKPmu1W+XirdfreB989awZNxg==", "commit"=>"Delete student", "id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/students" for ::1 at 2019-07-25 17:30:18 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:31:20 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2019-07-25 17:31:21 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/students/6" for ::1 at 2019-07-25 17:31:26 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rwhJ8g0mmklMvjAaWbvB0BuIhNSC6edn/UMQU1AFcbg1NTKpbGVzMRGXG1wX4lMh+kgWrygGv4TqF9698tDC2g==", "student"=>{"name"=>"Syed", "major"=>"SE", "age"=>"17", "instructor_id"=>"1"}, "commit"=>"Update Student", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/students/6
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:31:26 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2019-07-25 17:37:31 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 43ms (Views: 22.8ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/students/6" for ::1 at 2019-07-25 17:37:36 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1bhFbo+bRuWUfjNdHC2vRWIzghW41BiJ1IKht4cxrydPhT417tivnclXGBtSdD20g/MQbhI7QGrD1m9ZJeQcRQ==", "student"=>{"name"=>"Syed", "major"=>"SE", "age"=>"17", "instructor_id"=>"1"}, "commit"=>"Update Student", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/students/6/edit
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2019-07-25 17:37:36 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/students/6" for ::1 at 2019-07-25 17:37:57 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X/r/JQ3R0WIDc6Qhj+aTbWlGoGtnFmtEkHRmpA+8+0Fm10AgI9iVjLpleQbn2SfxwgyoB3ufTmFF6XnJY1SPbg==", "student"=>{"name"=>"Syed", "major"=>"SE", "age"=>"30", "instructor_id"=>"1"}, "commit"=>"Update Student", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/students/6/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2019-07-25 17:37:57 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/students/6" for ::1 at 2019-07-25 17:38:05 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tvs+ETa6gxmkediVjI3PywYvtdiLsgNFt7KdYJVhB0uP1oEUGLPH9x1vBbLksntXrWW9tJc7JmBiL4IN+YlzZA==", "student"=>{"name"=>"Syed", "major"=>"SE", "age"=>"30", "instructor_id"=>"1"}, "commit"=>"Update Student", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/students/6/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2019-07-25 17:38:05 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2019-07-25 17:38:19 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 32ms (Views: 22.4ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/students/6" for ::1 at 2019-07-25 17:38:23 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Sb6TGrpSg5mJBbccmzdfhstqScAkN8ipoRLJptZsLXIC0VJROAO4N8yy/saU2nisGehSxwZ+gdzGVRL97HEmg==", "student"=>{"name"=>"Syed", "major"=>"SE", "age"=>"30", "instructor_id"=>"1"}, "commit"=>"Update Student", "id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "students" SET "age" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["age", 30], ["updated_at", "2019-07-25 22:38:23.800679"], ["id", 6]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/6
+Completed 302 Found in 13ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:38:23 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 17:38:35 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 17:39:47 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/instructors/new" for ::1 at 2019-07-25 17:39:49 -0500
+Processing by InstructorsController#new as HTML
+  Rendering instructors/new.html.erb within layouts/application
+  Rendered instructors/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 17:40:19 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students" for ::1 at 2019-07-25 17:40:24 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-25 17:40:25 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered students/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2019-07-25 17:40:43 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/5" for ::1 at 2019-07-25 17:40:44 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-07-25 17:40:45 -0500
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."instructor_id" = ?[0m  [["instructor_id", 1]]
+  Rendered instructors/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:40:47 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6" for ::1 at 2019-07-25 17:42:53 -0500
+  
+ArgumentError ('applicationController' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+Started GET "/students/6" for ::1 at 2019-07-25 17:43:05 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 16.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-25 17:43:10 -0500
+  
+ActionController::RoutingError (uninitialized constant ApplicationcontrollerController):
+  
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (23.9ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.8ms)
+Started GET "/" for ::1 at 2019-07-25 17:43:22 -0500
+  
+ActionController::RoutingError (uninitialized constant ApplicationcontrollerController):
+  
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.7.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.7.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (3.9ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.6ms)
+Started GET "/" for ::1 at 2019-07-25 17:43:54 -0500
+Processing by ApplicationController#home as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ApplicationController#home is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.7.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+Started GET "/" for ::1 at 2019-07-25 17:44:58 -0500
+Processing by ApplicationController#home as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  Rendered instructors/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Instructors: </h1>
+    2: 
+    3: <% @instructors.each do |i| %>
+    4:     <%= link_to i.name, instructor_path(i) %><br/>
+    5: <% end %>
+    6: 
+  
+app/views/instructors/index.html.erb:3:in `_app_views_instructors_index_html_erb___3160599935233268218_70181793752500'
+app/controllers/application_controller.rb:5:in `home'
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+Started GET "/" for ::1 at 2019-07-25 17:45:52 -0500
+Processing by ApplicationController#home as HTML
+  Rendering home.html.erb within layouts/application
+  Rendered home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-25 17:47:04 -0500
+Processing by ApplicationController#home as HTML
+  Rendering home.html.erb within layouts/application
+  Rendered home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/instructors" for ::1 at 2019-07-25 17:47:07 -0500
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.5ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 25.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students" for ::1 at 2019-07-25 17:47:10 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
