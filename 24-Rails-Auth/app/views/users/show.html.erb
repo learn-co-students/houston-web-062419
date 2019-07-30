@@ -1,0 +1,5 @@
+<p><%= @user.name %></p>
+
+<%= form_with url:'/logout', method: 'delete' do |f| %>
+<%= f.submit "Logout"%> 
+<% end %>
