@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if(event.target.dataset.name === "alert"){
             window.alert("It is an alert box!!!")
         }
+        if(event.target.dataset.name === "log"){
+            console.log("It is a console log!!!")
+        }
+        if(event.target.dataset.name === "error"){
+            console.error("It is a console error!!!")
+        }
     })
 })
 
