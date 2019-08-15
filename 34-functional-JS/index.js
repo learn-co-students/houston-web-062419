@@ -1,4 +1,4 @@
-//Find reading in readme
+//Find reading in the README
 
 // Higher Order Function
 function highOrder(){
