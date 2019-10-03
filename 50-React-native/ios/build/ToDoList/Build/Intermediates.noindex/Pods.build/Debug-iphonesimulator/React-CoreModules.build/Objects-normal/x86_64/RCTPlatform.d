@@ -1,0 +1,42 @@
+dependencies: \
+  /Users/vidhi.sharma/Desktop/ToDoList/node_modules/react-native/React/CoreModules/RCTPlatform.mm \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Target\ Support\ Files/React-CoreModules/React-CoreModules-prefix.pch \
+  /Users/vidhi.sharma/Desktop/ToDoList/node_modules/react-native/React/CoreModules/RCTPlatform.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/RCTRequired/RCTRequired/RCTRequired.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety/RCTConvertHelpers.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyVector.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyIterator.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/Optional.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/Portability.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/CPortability.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/Traits.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/Utility.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Folly/folly/CppAttributes.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety/RCTTypedModuleConstants.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTCxxConvert.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTManagedPointer.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/ReactCommon/ReactCommon/RCTTurboModule.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTModuleMethod.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTBridgeMethod.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTNullability.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/ReactCommon/ReactCommon/JSCallInvoker.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/ReactCommon/ReactCommon/TurboModule.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-jsi/jsi/jsi.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-jsi/jsi/jsi-inl.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-cxxreact/cxxreact/MessageQueueThread.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/ios/Pods/Headers/Public/React-Core/React/RCTVersion.h \
+  /Users/vidhi.sharma/Desktop/ToDoList/node_modules/react-native/React/CoreModules/CoreModulesPlugins.h
